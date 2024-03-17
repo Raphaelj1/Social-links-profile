@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Inter";
+    font-weight: 100 900;
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+    /* primary */
+    --green: hsl(75, 94%, 57%);
+
+    /* neutral */
+    --white: 0, 0%, 100%;
+    --grey: 0, 0%, 20%;
+    --dark-grey: 0, 0%, 12%;
+    --off-black: 0, 0%, 8%;
+
+    --white-hsl: hsl(var(--white));
+    --grey-hsl: hsl(var(--grey));
+    --dark-grey-hsl: hsl(var(--dark-grey));
+    --off-black-hsl: hsl(var(--off-black));
+
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-800: 900;
+
+    --fs-default: 0.875rem;
+    --fs-100: 1rem;
+    --fs-200: 1.125rem;
+    --fs-300: 1.25rem;
+    --fs-400: 1.5rem;
+    --fs-500: 1.625rem;
+    --fs-600: 1.75rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Inter";
+    font-size: var(--fs-default);
+}
+
+.container {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--off-black-hsl);
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--dark-grey-hsl);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: hsl(var(--white));
+}
+
+
+.author {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+}
+
+.name {
+    font-size: var(--fs-600);
+    font-weight: var(--fw-600);
+}
+
+.location {
+    color: var(--green);
+    font-weight: var(--fw-600);
+}
+
+.bio {
+    color: hsl(var(--white), 0.6);
+}
+
+.social-links li {
+    list-style: none;
+}
+
+.social-links li:not(:last-child) {
+    margin-bottom: 0.875rem;
+}
+
+
+.social-links li a {
+    text-decoration: none;
+    color: var(--white-hsl);
+    background: hsl(var(--grey));
+    font-weight: var(--fw-600);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.875rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+
+li a:hover {
+    color: var(--off-black-hsl);
+    background: var(--green);
+    transition: 0.25s;
+}
